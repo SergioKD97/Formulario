@@ -22,7 +22,15 @@ and open the template in the editor.
     
     
     <body>
+        <?php
         
+        if (isset($_GET["hip1"])){
+            echo "venimos de la primera pagina";
+        } else {
+            header("Location:Index.php?accedido=true");
+        }
+        
+        ?>
         
         
         
@@ -32,7 +40,7 @@ and open the template in the editor.
                     
                     <br><B><h1><center> FORMULARIO</center></h1></B>
                     <tr>
-                        <td>Nombre: </td> <td><input  style="alignment-adjust: central" name="nombre" type="text"></td>
+                    <td>Nombre: </td> <td><input  style="alignment-adjust: central" name="nombre" type="text"></td>
                     </tr>
                     <tr>
                         <td>Apellidos: </td> <td><input name="telefono" type="text"></td>
