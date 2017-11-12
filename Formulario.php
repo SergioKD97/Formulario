@@ -26,8 +26,9 @@ and open the template in the editor.
         
         if (isset($_GET["hip1"])){
             echo "venimos de la primera pagina";
-        } else {
-            header("Location:Index.php?accedido=true");
+            
+        } elseif (isset($_GET["hip2"])) {
+        header("Location:Index.php?accedido=true");
         }
         
         ?>
@@ -36,26 +37,24 @@ and open the template in the editor.
         
         <div id="div1">
             <table width="200" border="0" cellspacing="10" align="center">
-                <form action="muestraFormulario.php" method="POST">
+                <form action="Index.php">
                     
                     <br><B><h1><center> FORMULARIO</center></h1></B>
                     <tr>
-                    <td>Nombre: </td> <td><input  style="alignment-adjust: central" name="nombre" type="text"></td>
+                        <td>Usuario: </td> <td><input name="usuario" type="text" value="ola"></td>
                     </tr>
                     <tr>
-                        <td>Apellidos: </td> <td><input name="telefono" type="text"></td>
+                        <td>E-mail: </td> <td><input name="e-mail" type="email" value="sergi-boalo@hotmail.com"></td>
                     </tr>
                     <tr>
-                        <td>E-mail: </td> <td><input name="e-mail" type="email"></td>
+                        <td>Contraseña: </td> <td><input name="password" type="password" value="asdewsrf"></td>
+                    </tr> 
+                    <tr>
+                        <td>Teléfono: </td> <td><input name="telefono" type="number" value="91287"></td>
                     </tr>
                     <tr>
-                        <td>Teléfono: </td> <td><input name="telefono" type="number"></td>
-                    </tr>
-                    <tr>
-                        <td>Contraseña: </td> <td><input name="password" type="password"></td>
-                    </tr>                 
-                    <tr>
-                        <td><input class="btn btn-success" type="reset" name="Borrar"></td><td><input style="margin-left: 70%" type="submit" name="enviar" value="Enviar"></td>
+                        <td><input type="reset" name="Borrar"></td>
+                        <td><input style="float: right" type="submit" name="enviar" value="enviar"></td>
                     </tr>
                     
                 </form>
